@@ -14,7 +14,7 @@ for i in range(n):
   circuit.h(q[i])
   
 circuit.measure(q,c)
-print(circuit)
+   print(circuit)
 
 # connecting the backend (a simulator or real Quantum machine) to run the circuit
 simulator=Aer.get_backend('qasm_simulator')
@@ -22,13 +22,13 @@ job=execute(circuit,simulator)
 
 # the output bitstring consists of a 3 collapsed Qubits
 result=job.result()
-print(result)
+   print(result)
 output=result.get_counts()
-print(output)
-print(output.keys())
-print(list(output.keys()))
+   print(output)
+   print(output.keys())
+   print(list(output.keys()))
 bitstring=list(output.keys())[0]
-print(bitstring)
+   print(bitstring)
 
 # converting binary to decimal integers
 random_integer=int(bitstring,2)
