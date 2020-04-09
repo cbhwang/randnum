@@ -22,12 +22,15 @@ job=execute(circuit,simulator)
 
 # the output bitstring consists of a 3 collapsed Qubits
 result=job.result()
-print(result)
+#print(result)
 output=result.get_counts()
 print(output)
-print(output.keys())
-print(list(output.keys()))
-bitstring=list(output.keys())[0]
+#print(output.keys())
+#print(list(output.keys()))
+#bitstring=list(output.keys())[0]
+
+#result chosen with the highest probability
+bitstring=max(output,key=lambda k:output[k])
 print(bitstring)
 
 # converting binary to decimal integers
